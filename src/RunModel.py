@@ -5,6 +5,7 @@ from __future__ import division
 from __future__ import print_function
 
 import tensorflow as tf
+tf.compat.v1.disable_eager_execution()
 import numpy as np
 from os.path import exists
 
