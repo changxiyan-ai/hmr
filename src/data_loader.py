@@ -238,7 +238,7 @@ class DataLoader(object):
             return pose_batch, shape_batch
 
     def read_data(self, filename_queue, has_3d=False):
-        with tf.name_scope(None, 'read_data', [filename_queue]):
+        with tf.name_scope(None, 'read_data', values=[filename_queue]):
             reader = tf.TFRecordReader()
             _, example_serialized = reader.read(filename_queue)
             if has_3d:
